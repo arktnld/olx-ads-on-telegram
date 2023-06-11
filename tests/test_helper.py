@@ -13,7 +13,9 @@ class TestFunctions(unittest.TestCase):
     def test_filter_found_urls(self):
         input_urls = ['https://example.com/abc', 'https:// example.com/def', 'https://test.com/']
         input_keys = ['example', 'abc']
+
         expected_output = ['https://test.com/']
+
         self.assertEqual(filter_found_urls(input_urls, input_keys), expected_output)
 
 if __name__ == '__main__':
